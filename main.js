@@ -75,7 +75,7 @@ function findLongestWord(inputString) {
     const wordMatches = inputString.match(/\b\w+\b/g);
 
     if (!wordMatches) {
-        return null; 
+        return false; 
     }
     const longestWord = wordMatches.reduce((longest, current) => {
         return current.length > longest.length ? current : longest;
